@@ -30,6 +30,7 @@ func newDeck() deck {
 
 }
 
+<<<<<<< HEAD
 func newDeckFromFile(filename string) deck {
 	bs, err := ioutil.ReadFile(filename)
 	if err != nil {
@@ -38,6 +39,10 @@ func newDeckFromFile(filename string) deck {
 	}
 	s := strings.Split(string(bs), ",")
 	return deck(s)
+=======
+func (d deck) saveToFile(filename string) error {
+	return ioutil.WriteFile(filename, []byte(d.toString()), 0666)
+>>>>>>> feature/Anamika-2020HT66557
 }
 
 func (d deck) shuffle() {
@@ -50,4 +55,8 @@ func (d deck) shuffle() {
 	}
 
 }
+<<<<<<< HEAD
 
+=======
+>>>>>>> feature/Anamika-2020HT66557
+Totaly different functions
